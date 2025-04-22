@@ -1,0 +1,86 @@
+.cake-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cake {
+  position: relative;
+  width: 150px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.cake-top,
+.cake-middle,
+.cake-bottom {
+  width: 150px;
+  height: 50px;
+  background: radial-gradient(circle, #fcd1d1, #e99f9f);
+  border-radius: 75px / 25px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: -10px;
+  position: relative;
+}
+
+.cake-middle {
+  background: radial-gradient(circle, #ffe9a0, #ffcc00);
+}
+
+.cake-bottom {
+  background: radial-gradient(circle, #d8b4f8, #a78bfa);
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 3px,
+    red 3px,
+    red 6px
+  );
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.flame {
+  width: 10px;
+  height: 15px;
+  background: radial-gradient(circle, orange, red);
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  left: 0;
+  animation: flicker 0.3s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
